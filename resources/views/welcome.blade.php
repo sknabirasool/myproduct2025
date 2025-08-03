@@ -10,14 +10,19 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             {{-- <h3 class="wow fadeInUp">about our Company</h3> --}}
-                            <h1 class="text-anime-style-3">Custom Application Development  Optimization For <span>Your Business</span></h1>
+                            <h1 class="text-anime-style-3">We build apps to help your <span>business work</span> better.</h1>
 
                         </div>
                         <!-- Section Title End -->
 
                         <!-- Hero Body Start -->
                         <div class="about-content">
-                            <p style="text-align: justify" class="wow fadeInUp" data-wow-delay="0.5s">Build Your Projects (BYP) provides tailored support to small businesses, software training institution softwares, civil engineering projects, and LMS applications, effectively addressing challenges encountered during the initial development stages. With expertly crafted projects, adaptable source code solutions, and robust cloud and server support, BYP empowers organizations to achieve their goals with confidence</p>
+                            <p style="text-align: justify" class="wow fadeInUp" data-wow-delay="0.5s">
+
+                                Build Your Projects (BYP) delivers specialized solutions designed to empower small businesses, software training institutes, civil engineering ventures, and learning management system (LMS) applications. We address the critical challenges faced during early development with precision and insight. Our services include expertly developed projects, flexible source code packages, and comprehensive cloud and server infrastructure support. With BYP as your technology partner, your organization is equipped to move forward with clarity, confidence, and measurable success.
+
+
+                            </p>
                         </div>
                         <!-- Hero Body End -->
 
@@ -73,9 +78,15 @@
                     <!-- About Us Content Start -->
                     <div class="about-content">
 
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">For any business organization, it is very pivotal to have their own designed and developed software, which are intended to fulfil their business goals and achieve their targets.</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.25s">
+                            For any business organization, having custom-designed and well-developed software is essential to achieving strategic goals and driving growth. Such software is tailored to meet specific business needs, ensuring efficiency and alignment with organizational objectives.
+                        </p>
 
-                        <p class="wow fadeInUp" data-wow-delay="0.5s"> Designing is a very decisive part of the smooth working of any organization, as it helps the business to conceptualize, frame and implement the complex system into an easier one. But with designing, another key step came for the smooth working of any organization is the step of deployment. Deployments are the procedure through which the designed system got available for use.</p>
+                        <p class="wow fadeInUp" data-wow-delay="0.5s">
+                            Design plays a critical role in this process, enabling businesses to conceptualize, structure, and simplify complex systems. However, beyond design, deployment is equally crucial. Deployment is the process that transitions a developed system into a live, usable state—making it accessible and functional for end-users. Together, thoughtful design and seamless deployment form the foundation of a successful digital transformation.
+
+
+                        </p>
 
 
                         {{-- <ul class="wow fadeInUp" data-wow-delay="1s">

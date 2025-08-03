@@ -41,7 +41,7 @@
 		<link rel="shortcut icon" href="{{asset('web/assets/images/mainlogo.png')}}">
 
 		<!-- Title -->
-		<title>Sriram Consultancy Services</title>
+		<title>Build Your App</title>
 
 
 		<!-- *************

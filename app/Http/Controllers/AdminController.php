@@ -36,7 +36,7 @@ class AdminController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            $request->session()->flash('alert-success', 'Welcome to Dashboard, '.$user);
+            $request->session()->flash('alert-success', 'Welcome to Dashboard, '. Auth::user()->name);
 
         //   Mail::to($user)->send(new LoginSuccessMail($user,$created_at));
         Auth::user()->update([ 'last_login_ip' => $ipAddress,'last_login_at'=>$created_at]);

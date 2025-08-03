@@ -11,7 +11,7 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Awaiken">
 	<!-- Page Title -->
-	<title>Weebix - IT Service And Technology HTML Template</title>
+	<title>Build Your App</title>
 	<!-- Favicon Icon -->
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 	<!-- Google Fonts Css-->
@@ -57,7 +57,7 @@
 				<div class="container">
 					<!-- Logo Start -->
 					<a class="navbar-brand" href="{{url('/')}}">
-						<img src="{{asset('web/images/logo.svg')}}" alt="Logo">
+						{{-- <img src="{{asset('web/images/logo.svg')}}" alt="Logo"> --}}
 					</a>
 					<!-- Logo End -->
 
