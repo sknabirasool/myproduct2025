@@ -11,6 +11,7 @@
                         <div class="section-title">
                             {{-- <h3 class="wow fadeInUp">about our Company</h3> --}}
                             <h1 class="text-anime-style-3">Custom Application Development  Optimization For <span>Your Business</span></h1>
+                            <h2>Nabi Shaik</h2>
                         </div>
                         <!-- Section Title End -->
 
