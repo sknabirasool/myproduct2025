@@ -20,4 +20,6 @@ jobs:
 
     - name: Deploy via SCP
       run: |
+        mkdir -p ~/.ssh
+        echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
         scp -r -P ${{ secrets.CPANEL_PORT }} * ${{ secrets.CPANEL_USERNAME }}@${{ secrets.CPANEL_HOST }}:${{ secrets.TARGET_PATH }}
