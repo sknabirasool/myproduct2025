@@ -370,7 +370,7 @@
                             <img src="{{asset('web/images/icon-whyus-1.svg')}}" alt="">
                         </div>
                         <h3>innovation</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                        <p>I bring innovation to every project by crafting smart, future-ready digital solutions..</p>
                     </div>
                     <!-- Why Choose Item End -->
                 </div>
@@ -382,7 +382,7 @@
                             <img src="{{asset('web/images/icon-whyus-2.svg')}}" alt="">
                         </div>
                         <h3>quality-focused</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                        <p>I bring innovation to every project with a quality-focused approach to crafting future-ready digital solutions.</p>
                     </div>
                     <!-- Why Choose Item End -->
                 </div>
@@ -394,7 +394,7 @@
                             <img src="{{asset('web/images/icon-whyus-3.svg')}}" alt="">
                         </div>
                         <h3>value for money</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                        <p>I deliver innovative, quality-focused digital solutions that offer true value for money.</p>
                     </div>
                     <!-- Why Choose Item End -->
                 </div>

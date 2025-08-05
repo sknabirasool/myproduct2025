@@ -26,119 +26,29 @@
     <div class="our-services page-service">
         <div class="container">
             <div class="row">
+
+                @foreach ($services as $service)
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp" data-wow-delay="0.25s">
                         <div class="service-content">
                             <div class="service-content-title">
-                                <h2>web development</h2>
-                                <a href="#"><img src="images/arrow.svg" alt=""></a>
+                                <h2>{{$service->service_name}}</h2>
+                                <a href="#"><img src="{{asset('web/images/arrow.svg')}}" alt=""></a>
                             </div>
-                            <p>totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae.</p>
+                            <p>{{ substr($service->description, 0, 80) }}...</p>
                         </div>
                         <div class="service-image">
                             <figure class="image-anime">
-                                <img src="images/service-img-1.jpg" alt="">
+                                <img src="{{URL('uploads/services/'.$service->image)}}" >
                             </figure>
                         </div>
                     </div>
                     <!-- Service Item End -->
                 </div>
+                @endforeach
 
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-content">
-                            <div class="service-content-title">
-                                <h2>Digital Marketing</h2>
-                                <a href="#"><img src="images/arrow.svg" alt=""></a>
-                            </div>
-                            <p>totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae.</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/service-img-2.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="0.75s">
-                        <div class="service-content">
-                            <div class="service-content-title">
-                                <h2>Game Development</h2>
-                                <a href="#"><img src="images/arrow.svg" alt=""></a>
-                            </div>
-                            <p>totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae.</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/service-img-3.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1s">
-                        <div class="service-content">
-                            <div class="service-content-title">
-                                <h2>Mobile App Development</h2>
-                                <a href="#"><img src="images/arrow.svg" alt=""></a>
-                            </div>
-                            <p>totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae.</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/service-img-4.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1.25s">
-                        <div class="service-content">
-                            <div class="service-content-title">
-                                <h2>Networking Services</h2>
-                                <a href="#"><img src="images/arrow.svg" alt=""></a>
-                            </div>
-                            <p>totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae.</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/service-img-5.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <!-- Service Item Start -->
-                    <div class="service-item wow fadeInUp" data-wow-delay="1.5s">
-                        <div class="service-content">
-                            <div class="service-content-title">
-                                <h2>Graphics Design</h2>
-                                <a href="#"><img src="images/arrow.svg" alt=""></a>
-                            </div>
-                            <p>totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae.</p>
-                        </div>
-                        <div class="service-image">
-                            <figure class="image-anime">
-                                <img src="images/service-img-6.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <!-- Service Item End -->
-                </div>
             </div>
         </div>
     </div>
