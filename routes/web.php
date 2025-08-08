@@ -42,6 +42,6 @@ Route::get('/add-services',[AdminController::class,'AddServices']);
 Route::post('/add-services-data',[AdminController::class,'AddServiceData']);
 Route::get('/add-services-list',[AdminController::class,'AddServicesList']);
 
-
+Route::get('/admin-add-project',[AdminController::class,'AddProject']);
 
 //hello world

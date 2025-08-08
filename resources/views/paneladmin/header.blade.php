@@ -195,7 +195,7 @@
 											<a href="{{url('add-services-list')}}">Services List</a>
 										</li>
 										<li>
-											<a href="{{url('admin-add-course-topics')}}">Add Projects</a>
+											<a href="{{url('/admin-add-project')}}">Add Projects</a>
 										</li>
 										<li>
 											<a href="{{url('/admin-project-list')}}">Projects List</a>

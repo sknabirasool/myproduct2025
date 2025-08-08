@@ -130,6 +130,10 @@ public function AddServicesList()
 
 
 
+public function AddProject()
+{
+    return view('admin.add-project');
+}
 
 
 }

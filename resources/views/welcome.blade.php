@@ -280,7 +280,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <!-- Works Item Start -->
                     <div class="works-item wow fadeInUp" data-wow-delay="0.25s">
                         <div class="works-image">
@@ -296,7 +296,7 @@
                     <!-- Works Item End -->
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <!-- Works Item Start -->
                     <div class="works-item wow fadeInUp" data-wow-delay="0.5s">
                         <div class="works-image">
@@ -312,7 +312,7 @@
                     <!-- Works Item End -->
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <!-- Works Item Start -->
                     <div class="works-item wow fadeInUp" data-wow-delay="0.75s">
                         <div class="works-image">
@@ -328,21 +328,7 @@
                     <!-- Works Item End -->
                 </div>
 
-                <div class="col-md-6">
-                    <!-- Works Item Start -->
-                    <div class="works-item wow fadeInUp" data-wow-delay="1s">
-                        <div class="works-image">
-                            <figure class="image-anime">
-                                <img src="{{asset('web/images/works-img-4.jpg')}}" alt="">
-                            </figure>
-                        </div>
-                        <div class="works-content">
-                            <h2>Project Alpha</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <!-- Works Item End -->
-                </div>
+
             </div>
         </div>
     </div>

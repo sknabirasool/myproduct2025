@@ -13,7 +13,7 @@
 	<!-- Page Title -->
 	<title>Build Your App</title>
 	<!-- Favicon Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="{{asset('web/images/favicon.png')}}">
 	<!-- Google Fonts Css-->
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -77,7 +77,7 @@
                                 <li class="nav-item"><a class="nav-link" href="{{url('/services')}}">services</a></li>
                                 <li class="nav-item"><a class="nav-link" href="portfolio.html">portfolio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="blog.html">blog</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">pages</a>
+                                {{-- <li class="nav-item submenu"><a class="nav-link" href="#">pages</a>
                                     <ul>
                                         <li class="nav-item"><a class="nav-link" href="service-single.html">service details</a></li>
                                         <li class="nav-item"><a class="nav-link" href="portfolio-single.html">portfolio details </a></li>
@@ -85,7 +85,7 @@
                                         <li class="nav-item"><a class="nav-link" href="faqs.html">FAQ</a></li>
                                         <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
 
                                 <li class="nav-item highlighted-menu"><a class="nav-link" href="contact-us.html">free consultation</a></li>
                             </ul>
@@ -93,7 +93,7 @@
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
                             <a href="{{url('/login')}}" class="btn-default">Log in</a> &nbsp;
-                            <a href="contact-us.html" class="btn-default">Sign up</a>
+                            {{-- <a href="contact-us.html" class="btn-default">Sign up</a> --}}
                         </div>
 
                         <!-- Let’s Start Button End -->
