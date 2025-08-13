@@ -24,10 +24,10 @@
 
 												<!-- Field wrapper start -->
 												<div class="field-wrapper">
-													<input class="form-control" type="text" name="service_name" required>
+													<input class="form-control" type="text" name="project_name" required>
 													<div class="field-placeholder">Project Name <span class="text-danger">*</span></div>
 													<div class="form-text">
-														Please enter your full Service Name.
+														Please enter your full Project Name.
 													</div>
 												</div>
 												<!-- Field wrapper end -->
@@ -38,7 +38,7 @@
 
 												<!-- Field wrapper start -->
 												<div class="field-wrapper">
-													<input class="form-control" type="text" name="description" required>
+													<input class="form-control" type="text" name="client_name" required>
 													<div class="field-placeholder">Client Name <span class="text-danger">*</span></div>
 													<div class="form-text">
 														Please enter your full Client Name.
@@ -52,7 +52,7 @@
 
 												<!-- Field wrapper start -->
 												<div class="field-wrapper">
-													<input class="form-control" type="text" name="description" required>
+													<input class="form-control" type="text" name="technology" required>
 													<div class="field-placeholder">Technologies Used <span class="text-danger">*</span></div>
 													<div class="form-text">
 														Please enter your full Technologies Used.
@@ -66,7 +66,7 @@
 
 												<!-- Field wrapper start -->
 												<div class="field-wrapper">
-													<input class="form-control" type="date" name="description" required>
+													<input class="form-control" type="date" name="complete_date" required>
 													<div class="field-placeholder">Completion Date <span class="text-danger">*</span></div>
 													<div class="form-text">
 														Please enter your full Completion Date.
@@ -81,7 +81,7 @@
 
 												<!-- Field wrapper start -->
 												<div class="field-wrapper">
-													<input class="form-control" type="text" name="description" required>
+													<input class="form-control" type="text" name="short_description" required>
 													<div class="field-placeholder">Short Description <span class="text-danger">*</span></div>
 													<div class="form-text">
 														Please enter your  Short Description.
@@ -95,7 +95,7 @@
 
 												<!-- Field wrapper start -->
 												<div class="field-wrapper">
-													<input class="form-control" type="text" name="description" required>
+													<input class="form-control" type="text" name="full_description" required>
 													<div class="field-placeholder">Full Description <span class="text-danger">*</span></div>
 													<div class="form-text">
 														Please enter your Full Description.
@@ -123,7 +123,7 @@
 
 												<!-- Field wrapper start -->
 												<div class="field-wrapper">
-													<input class="form-control" type="text" name="description" required>
+													<input class="form-control" type="text" name="domain_name" required>
 													<div class="field-placeholder">Project Domain Link  <span class="text-danger">*</span></div>
 													<div class="form-text">
 														Please enter your Full Project Domain Link.
@@ -137,7 +137,7 @@
 
 												<!-- Field wrapper start -->
 												<div class="field-wrapper">
-													<input class="form-control" type="text" name="description" required>
+													<input class="form-control" type="text" name="github_link" required>
 													<div class="field-placeholder">Project GitHub Link  <span class="text-danger">*</span></div>
 													<div class="form-text">
 														Please enter your Full Project GitHub Link.

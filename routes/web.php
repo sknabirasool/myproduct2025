@@ -43,5 +43,7 @@ Route::post('/add-services-data',[AdminController::class,'AddServiceData']);
 Route::get('/add-services-list',[AdminController::class,'AddServicesList']);
 
 Route::get('/admin-add-project',[AdminController::class,'AddProject']);
+Route::post('/add-project-data',[AdminController::class,'AddProjectData']);
 
-//hello world
+
+

@@ -135,5 +135,65 @@ public function AddProject()
     return view('admin.add-project');
 }
 
+public function AddProjectData(Request $request)
+{
+    // dd($request->all());
+    try {
+
+
+        // Extract data from request
+        $project_name = $request->project_name;
+        $client_name = $request->client_name;
+        $technology = $request->technology;
+        $complete_date = $request->complete_date;
+        $short_description = $request->short_description;
+        $full_description = $request->full_description;
+        $domain_name = $request->domain_name;
+        $github_link = $request->github_link;
+
+        $file = $request->file('filename');
+
+        $imagenames = ""; // Default image name
+
+        // Handle file upload if provided
+        if ($file) {
+            $pic_name = $file->getClientOriginalName();
+            $imagenames = strtotime(now()) . rand(1000, 9999) . "." . $file->getClientOriginalExtension();
+            $destinationPath = 'uploads/projects/';
+            $file->move($destinationPath, $imagenames);
+        }
+
+        // Insert data into the database
+        DB::table('projects')->insert([
+            'project_title' => $project_name,
+            'client_name' => $client_name,
+            'technologies_used' => $technology,
+            'completion_date' => $complete_date,
+            'short_description' => $short_description,
+            'full_description' => $full_description,
+            'project_link' => $domain_name,
+            'github_link' => $github_link,
+            'image_url' => $imagenames,
+            'status' => 1
+        ]);
+        Session::flash('alert-success', 'You have successfully added a project!');
+        \App\Helpers\LogActivity::addToLog('Project added successfully.');
+        return redirect('/admin-add-project');
+    } catch (\Exception $e) {
+        \Log::error('Error adding project: ' . $e->getMessage());
+        Session::flash('alert-danger', 'Failed to add the project. Please try again.');
+        return redirect()->back()->withInput()->withErrors(['error' => $e->getMessage()]);
+    }
+
+
+
+}
+
+
+
+
+
+
+
 
 }
