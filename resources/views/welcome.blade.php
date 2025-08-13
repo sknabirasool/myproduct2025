@@ -273,13 +273,16 @@
                 <div class="col-lg-4 col-md-3">
                     <!-- Section Btn Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                        <a href="#" class="btn-default">all portfolio</a>
+                        <a href="#" class="btn-default">all Projects</a>
                     </div>
                     <!-- Section Btn End -->
                 </div>
             </div>
 
             <div class="row">
+
+            @foreach ($projects as $project)
+
                 <div class="col-md-4">
                     <!-- Works Item Start -->
                     <div class="works-item wow fadeInUp" data-wow-delay="0.25s">
@@ -289,44 +292,17 @@
                             </figure>
                         </div>
                         <div class="works-content">
-                            <h2>Operation Atlas</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <!-- Works Item End -->
-                </div>
+                            <h2>{{$project->project_title}}</h2>
+                        <p>{{ \Illuminate\Support\Str::limit($project->short_description, 150) }}</p>
 
-                <div class="col-md-4">
-                    <!-- Works Item Start -->
-                    <div class="works-item wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="works-image">
-                            <figure class="image-anime">
-                                <img src="{{asset('web/images/works-img-2.jpg')}}" alt="">
-                            </figure>
-                        </div>
-                        <div class="works-content">
-                            <h2>Quantum Quest</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                    <!-- Works Item End -->
-                </div>
 
-                <div class="col-md-4">
-                    <!-- Works Item Start -->
-                    <div class="works-item wow fadeInUp" data-wow-delay="0.75s">
-                        <div class="works-image">
-                            <figure class="image-anime">
-                                <img src="{{asset('web/images/works-img-3.jpg')}}" alt="">
-                            </figure>
-                        </div>
-                        <div class="works-content">
-                            <h2>Blue Horizon Initiative</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                     </div>
                     <!-- Works Item End -->
                 </div>
+            @endforeach
+
+
 
 
             </div>

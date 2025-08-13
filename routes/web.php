@@ -10,7 +10,11 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     $services=DB::table('tbl_categories_sub')->where('status',1)->get();
-    return view('welcome',compact('services'));
+
+    $projects=DB::table('projects')->where('status',1)->get();
+
+
+    return view('welcome',compact('services','projects'));
 });
 
 Route::get('/about', [WebSiteController::class, 'aboutus']);
