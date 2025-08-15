@@ -23,7 +23,8 @@ class WebSiteController extends Controller
    }
    public function services(){
     $services=DB::table('tbl_categories_sub')->where('status',1)->get();
-    return view('web.services',compact('services'));
+    $project_logos=DB::table('projects')->where('status',1)->get();
+    return view('web.services',compact('services','project_logos'));
    }
 
 

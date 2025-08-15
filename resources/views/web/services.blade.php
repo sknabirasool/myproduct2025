@@ -73,7 +73,7 @@
                     <!-- Counter Box Start -->
                     <div class="counter-box">
                         <h3><em>#</em><span>1</span> IT Services</h3>
-						<p>Company In UK</p>
+						{{-- <p>Company In UK</p> --}}
                     </div>
                     <!-- Counter Box End -->
                 </div>
@@ -81,8 +81,8 @@
                 <div class="col-lg-3 col-md-6">
                     <!-- Counter Box Start -->
                     <div class="counter-box">
-                        <h3><span class="counter">300</span><em>+</em></h3>
-						<p>Global Clients</p>
+                        <h3><span class="counter">10</span><em>+</em></h3>
+						<p> Clients</p>
                     </div>
                     <!-- Counter Box End -->
                 </div>
@@ -90,7 +90,7 @@
                 <div class="col-lg-3 col-md-6">
                     <!-- Counter Box Start -->
                     <div class="counter-box">
-                        <h3><span class="counter">21</span><em>+</em> years</h3>
+                        <h3><span class="counter">4</span><em>+</em> years</h3>
 						<p>In Development</p>
                     </div>
                     <!-- Counter Box End -->
@@ -99,8 +99,8 @@
                 <div class="col-lg-3 col-md-6">
                     <!-- Counter Box Start -->
                     <div class="counter-box">
-                        <h3><em>$</em><span class="counter">50</span><em>+</em> Million</h3>
-						<p>Total Revenue</p>
+                        <h3><em></em><span class="counter">20</span><em>+</em> </h3>
+						<p>Application Services</p>
                     </div>
                     <!-- Counter Box End -->
                 </div>
@@ -117,76 +117,24 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">executive partners</h3>
-                        <h2 class="text-anime-style-3">100+ Partners & supporters</h2>
+                        <h2 class="text-anime-style-3">5+ Partners & supporters</h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
             </div>
 
+
             <div class="row">
+
+                @foreach ($project_logos as $logos)
                 <div class="col-lg-3 col-6">
                     <!-- Partners Logo Start -->
                     <div class="partners-logo wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="images/icon-partners-1.svg" alt="">
+                        <img src="{{asset('uploads/projects/'.$logos->image_url)}}" alt="{{$logos->image_url}}">
                     </div>
                     <!-- Partners Logo End -->
                 </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="0.4s">
-                        <img src="images/icon-partners-2.svg" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="0.6s">
-                        <img src="images/icon-partners-3.svg" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="0.8s">
-                        <img src="images/icon-partners-4.svg" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="1s">
-                        <img src="images/icon-partners-3.svg" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="1.2s">
-                        <img src="images/icon-partners-4.svg" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="1.4s">
-                        <img src="images/icon-partners-1.svg" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="1.6s">
-                        <img src="images/icon-partners-2.svg" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
+                 @endforeach
             </div>
         </div>
     </div>
