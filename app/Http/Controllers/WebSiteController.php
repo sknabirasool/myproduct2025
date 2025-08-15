@@ -25,4 +25,18 @@ class WebSiteController extends Controller
     $services=DB::table('tbl_categories_sub')->where('status',1)->get();
     return view('web.services',compact('services'));
    }
+
+
+    public function projectProfile($id){
+     $project_profile=DB::table('projects')->where('id',$id)->get();
+     if(!$project_profile){
+          return redirect('/')->with('alert-danger', 'Project not found!');
+     }
+     return view('web.project-profile',compact('project_profile'));
+    }
+    public function myTestAddToLog(){
+          LogActivity::addToLog('This is a test log entry');
+          return 'Log entry added successfully!';
+     }
+
 }

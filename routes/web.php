@@ -13,14 +13,14 @@ Route::get('/', function () {
 
     $projects=DB::table('projects')->where('status',1)->get();
 
-
     return view('welcome',compact('services','projects'));
 });
 
 Route::get('/about', [WebSiteController::class, 'aboutus']);
 Route::get('/services', [WebSiteController::class, 'services']);
 
-
+// Project Profile
+Route::get('/project-profile/{id}', [WebSiteController::class, 'projectProfile']);
 
 
 // =================================== Back - End Servies   =====================================

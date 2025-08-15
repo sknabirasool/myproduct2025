@@ -287,14 +287,14 @@
                     <!-- Works Item Start -->
                     <div class="works-item wow fadeInUp" data-wow-delay="0.25s">
                         <div class="works-image">
-                            <figure class="image-anime">
-                                <img src="{{asset('web/images/works-img-1.jpg')}}" alt="">
+                            <a href="{{url('project-profile/'.$project->id)}}"><figure class="image-anime">
+                               <img src="{{asset('web/images/works-img-1.jpg')}}" alt="">
                             </figure>
+                            </a>
                         </div>
                         <div class="works-content">
-                            <h2>{{$project->project_title}}</h2>
+                            <h2><a href="{{url('project-profile/'.$project->id)}}">{{$project->project_title}}</a></h2>
                         <p>{{ \Illuminate\Support\Str::limit($project->short_description, 150) }}</p>
-
 
                         </div>
                     </div>
