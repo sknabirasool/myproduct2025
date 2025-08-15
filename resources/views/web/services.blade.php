@@ -130,7 +130,7 @@
                 <div class="col-lg-3 col-6">
                     <!-- Partners Logo Start -->
                     <div class="partners-logo wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="{{asset('uploads/projects/'.$logos->image_url)}}" alt="{{$logos->image_url}}" height="150px" width="350px">
+                        <img src="{{asset('uploads/projects/'.$logos->image_url)}}" alt="{{$logos->image_url}}" height="100px" width="250px">
                     </div>
                     <!-- Partners Logo End -->
                 </div>
