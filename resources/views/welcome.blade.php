@@ -426,69 +426,15 @@
             </div>
 
             <div class="row">
+                 @foreach ($projects as $logos)
                 <div class="col-lg-3 col-6">
                     <!-- Partners Logo Start -->
                     <div class="partners-logo wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="{{asset('web/images/icon-partners-1.svg')}}" alt="">
+                        <img src="{{asset('uploads/projects/'.$logos->image_url)}}" alt="{{$logos->image_url}}" height="100px" width="250px">
                     </div>
                     <!-- Partners Logo End -->
                 </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="0.4s">
-                        <img src="{{asset('web/images/icon-partners-2.svg')}}" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="0.6s">
-                        <img src="{{asset('web/images/icon-partners-3.svg')}}" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="0.8s">
-                        <img src="{{asset('web/images/icon-partners-4.svg')}}" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="1s">
-                        <img src="{{asset('web/images/icon-partners-3.svg')}}" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="1.2s">
-                        <img src="{{asset('web/images/icon-partners-4.svg')}}" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="1.4s">
-                        <img src="{{asset('web/images/icon-partners-1.svg')}}" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
-
-                <div class="col-lg-3 col-6">
-                    <!-- Partners Logo Start -->
-                    <div class="partners-logo wow fadeInUp" data-wow-delay="1.6s">
-                        <img src="{{asset('web/images/icon-partners-2.svg')}}" alt="">
-                    </div>
-                    <!-- Partners Logo End -->
-                </div>
+                 @endforeach
             </div>
         </div>
     </div>
