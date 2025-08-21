@@ -13,6 +13,7 @@ Route::get('/', function () {
 
     $projects=DB::table('projects')->where('status',1)->get();
 
+
     return view('welcome',compact('services','projects'));
 });
 
