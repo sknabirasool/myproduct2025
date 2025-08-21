@@ -182,7 +182,7 @@
                         <div class="col-lg-6">
                             <!-- Explore Item Content Start -->
                             <div class="explore-item-content wow fadeInUp" data-wow-delay="0.25s">
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium , totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p>
+                                <p>I take pride in delivering creative, reliable, and result-driven solutions tailored to each project. From concept to execution, I ensure every detail reflects quality and professionalism. Explore my portfolio to see how I’ve helped clients bring their ideas to life and discover how I can do the same for you</p>
                             </div>
                             <!-- Explore Item Content End -->
                         </div>
