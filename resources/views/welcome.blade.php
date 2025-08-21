@@ -10,7 +10,7 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             {{-- <h3 class="wow fadeInUp">about our Company</h3> --}}
-                            <h1 class="text-anime-style-3">Build Your Brand <span>Grow Your Business</span> better.</h1>
+                            <h1 class="text-anime-style-3">Build Your Brand <span>Grow Your Business</span></h1>
 
                         </div>
                         <!-- Section Title End -->
