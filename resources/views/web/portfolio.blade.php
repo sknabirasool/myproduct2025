@@ -48,8 +48,9 @@
 							<!-- Works Item Start -->
 							<div class="works-item">
 						<div class="works-image">
-                            <figure>
-                            <a href="{{url('project-profile/'.$project->id)}}"><figure class="image-anime">
+
+                            <a href="{{url('project-profile/'.$project->id)}}">
+                            <figure class="image-anime">
                                <img src="{{asset('web/images/works-img-1.jpg')}}" alt="">
                             </figure>
                             </a>
