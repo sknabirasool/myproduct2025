@@ -27,6 +27,9 @@ class WebSiteController extends Controller
     return view('web.services',compact('services','project_logos'));
    }
 
+   public function portfolio(){
+    $projects=DB::table('projects')->where('status',1)->get();
+    return view('web.portfolio',compact('projects'));}
 
     public function projectProfile($id){
      $project_profile=DB::table('projects')->where('id',$id)->get();

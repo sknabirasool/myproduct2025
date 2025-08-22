@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/about', [WebSiteController::class, 'aboutus']);
 Route::get('/services', [WebSiteController::class, 'services']);
-
+Route::get('/portfolio', [WebSiteController::class, 'portfolio']);
 // Project Profile
 Route::get('/project-profile/{id}', [WebSiteController::class, 'projectProfile']);
 
