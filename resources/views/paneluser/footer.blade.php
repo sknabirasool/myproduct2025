@@ -12,10 +12,10 @@
                                 <figure>
                                     <img src="images/footer-logo.svg" alt="">
                                 </figure>
-                                <p>Creative Agency Based on Lorem Ipsum</p>
+                                <p>Build Your Projects (BYP) delivers specialized solutions designed to empower small businesses, software training institutes, civil engineering ventures, and learning management system (LMS) applications. We address the critical challenges faced during early development with precision and insight. </p>
                                 <ul>
-                                    <li><a href="#">info@domainname.com</a></li>
-                                    <li><a href="#">(+0) 123 456 789</a></li>
+                                    <li><a href="#">info@buildyourproject.in</a></li>
+                                    <li><a href="#">+91-939-83-25250</a></li>
                                 </ul>
                             </div>
                             <!-- Footer About End -->
@@ -74,7 +74,7 @@
                         <div class="col-lg-6">
                             <!-- Footer Copyright Content Start -->
                             <div class="footer-copyright-text">
-                                <p>Copyright © 2024 weebix. All rights reserved.</p>
+                                <p>Copyright © 2024 buildyourproject All rights reserved.</p>
                             </div>
                             <!-- Footer Copyright Content End -->
                         </div>

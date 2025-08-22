@@ -43,4 +43,11 @@ class WebSiteController extends Controller
           return 'Log entry added successfully!';
      }
 
+public function contactUs(){
+    return view('web.contact-us');
+   }
+
+
+
+
 }

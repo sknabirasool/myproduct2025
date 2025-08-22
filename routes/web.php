@@ -20,6 +20,8 @@ Route::get('/', function () {
 Route::get('/about', [WebSiteController::class, 'aboutus']);
 Route::get('/services', [WebSiteController::class, 'services']);
 Route::get('/portfolio', [WebSiteController::class, 'portfolio']);
+
+Route::get('/contact-us', [WebSiteController::class, 'contactUs']);
 // Project Profile
 Route::get('/project-profile/{id}', [WebSiteController::class, 'projectProfile']);
 

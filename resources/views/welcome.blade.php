@@ -29,7 +29,7 @@
                         <!-- Hero Footer Start -->
                         <div class="hero-footer">
                             <a href="#" class="btn-default wow fadeInUp" data-wow-delay="0.75s">free consultation</a>
-                            <a href="#" class="btn-default wow fadeInUp" data-wow-delay="0.75s">View Portfolio</a>
+                            <a href="{{url('/portfolio')}}" class="btn-default wow fadeInUp" data-wow-delay="0.75s">View Portfolio</a>
                         </div>
                         <!-- Hero Footer End -->
                     </div>
@@ -222,7 +222,7 @@
                 <div class="col-lg-5 col-md-5">
                     <!-- Section Btn Start -->
                     <div class="section-btn">
-                        <a href="#" class="btn-default wow fadeInUp" data-wow-delay="0.25s">view all services</a>
+                        <a href="{{url('/services')}}" class="btn-default wow fadeInUp" data-wow-delay="0.25s">view all services</a>
                     </div>
                     <!-- Section Btn End -->
                 </div>
@@ -273,7 +273,7 @@
                 <div class="col-lg-4 col-md-3">
                     <!-- Section Btn Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                        <a href="#" class="btn-default">all Projects</a>
+                        <a href="{{url('portfolio')}}" class="btn-default">all Projects</a>
                     </div>
                     <!-- Section Btn End -->
                 </div>
@@ -395,9 +395,9 @@
                                 <!-- Explore Item Content Start -->
                                 <div class="explore-item-tags wow fadeInUp" data-wow-delay="0.25s">
                                     <ul>
-                                        <li><a href="#" class="btn-default">dribbble</a></li>
-                                        <li><a href="#" class="btn-default">linkedin</a></li>
-                                        <li><a href="#" class="btn-default">contact Us</a></li>
+                                        {{-- <li><a href="#" class="btn-default">dribbble</a></li>
+                                        <li><a href="#" class="btn-default">linkedin</a></li> --}}
+                                        <li><a href="{{url('/contact-us')}}" class="btn-default">contact Us</a></li>
                                     </ul>
                                 </div>
                                 <!-- Explore Item Content End -->
