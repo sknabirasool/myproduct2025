@@ -159,10 +159,10 @@
                     <!-- Why Choose Item Start -->
                     <div class="why-choose-us-item wow fadeInUp" data-wow-delay="0.25s">
                         <div class="icon-box">
-                            <img src="images/icon-whyus-1.svg" alt="">
+                            <img src="{{asset('web/images/icon-whyus-1.svg')}}" alt="">
                         </div>
                         <h3>innovation</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                        <p>I bring innovation to every project by crafting smart, future-ready digital solutions..</p>
                     </div>
                     <!-- Why Choose Item End -->
                 </div>
@@ -171,10 +171,10 @@
                     <!-- Why Choose Item Start -->
                     <div class="why-choose-us-item wow fadeInUp" data-wow-delay="0.5s">
                         <div class="icon-box">
-                            <img src="images/icon-whyus-2.svg" alt="">
+                            <img src="{{asset('web/images/icon-whyus-2.svg')}}" alt="">
                         </div>
                         <h3>quality-focused</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                        <p>I bring innovation to every project with a quality-focused approach to crafting future-ready digital solutions.</p>
                     </div>
                     <!-- Why Choose Item End -->
                 </div>
@@ -183,64 +183,63 @@
                     <!-- Why Choose Item Start -->
                     <div class="why-choose-us-item wow fadeInUp" data-wow-delay="0.75s">
                         <div class="icon-box">
-                            <img src="images/icon-whyus-3.svg" alt="">
+                            <img src="{{asset('web/images/icon-whyus-3.svg')}}" alt="">
                         </div>
                         <h3>value for money</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                        <p>I deliver innovative, quality-focused digital solutions that offer true value for money.</p>
                     </div>
                     <!-- Why Choose Item End -->
                 </div>
 
-                <div class="col-md-12">
-                    <!-- Why Us Explore Item Start -->
-                    <div class="why-us-explore-item">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="why-us-section-title">
-                                    <!-- Section Title Start -->
-                                    <div class="section-title">
-                                        <h2 class="text-anime-style-3">Do you want to explore our outstanding work?</h2>
-                                    </div>
-                                    <!-- Section Title End -->
-
-                                    <!-- Explore Item Icon Start -->
-                                    <div class="explore-item-icon">
-                                        <img src="images/icon-whyus-4.svg" alt="">
-                                    </div>
-                                    <!-- Explore Item Icon End -->
+               <div class="col-md-12">
+                <!-- Why Us Explore Item Start -->
+                <div class="why-us-explore-item">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="why-us-section-title">
+                                <!-- Section Title Start -->
+                                <div class="section-title">
+                                    <h2 class="text-anime-style-3">Do you want to explore our outstanding work?</h2>
                                 </div>
-                            </div>
-                        </div>
+                                <!-- Section Title End -->
 
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <!-- Explore Item Content Start -->
-                                <div class="explore-item-content wow fadeInUp" data-wow-delay="0.25s">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium , totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p>
+                                <!-- Explore Item Icon Start -->
+                                <div class="explore-item-icon">
+                                    <img src="images/icon-whyus-4.svg" alt="">
                                 </div>
-                                <!-- Explore Item Content End -->
-                            </div>
-
-                            <div class="col-lg-6">
-                                <!-- Explore Item Content Start -->
-                                <div class="explore-item-tags wow fadeInUp" data-wow-delay="0.25s">
-                                    <ul>
-                                        <li><a href="#" class="btn-default">dribbble</a></li>
-                                        <li><a href="#" class="btn-default">linkedin</a></li>
-                                        <li><a href="#" class="btn-default">contact Us</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Explore Item Content End -->
+                                <!-- Explore Item Icon End -->
                             </div>
                         </div>
                     </div>
-                    <!-- Why Us Explore Item End -->
+
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <!-- Explore Item Content Start -->
+                            <div class="explore-item-content wow fadeInUp" data-wow-delay="0.25s">
+                                <p>I take pride in delivering creative, reliable, and result-driven solutions tailored to each project. From concept to execution, I ensure every detail reflects quality and professionalism. Explore my portfolio to see how I’ve helped clients bring their ideas to life and discover how I can do the same for you</p>
+                            </div>
+                            <!-- Explore Item Content End -->
+                        </div>
+
+                        <div class="col-lg-6">
+                            <!-- Explore Item Content Start -->
+                            <div class="explore-item-tags wow fadeInUp" data-wow-delay="0.25s">
+                                <ul>
+                                    <li><a href="#" class="btn-default">dribbble</a></li>
+                                    <li><a href="#" class="btn-default">linkedin</a></li>
+                                    <li><a href="#" class="btn-default">contact Us</a></li>
+                                </ul>
+                            </div>
+                            <!-- Explore Item Content End -->
+                        </div>
+                    </div>
                 </div>
+                <!-- Why Us Explore Item End -->
+            </div>
             </div>
         </div>
     </div>
     <!-- Why Choose Us Section End -->
-
     <!-- clients testimonials Section Start -->
 	<div class="clients-testimonials about-testimonials">
         <div class="container">
