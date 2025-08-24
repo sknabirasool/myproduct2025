@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Redis;
 class WebSiteController extends Controller
 {
    public function aboutus(){
-    return view('web.about-us');
+    $projects=DB::table('projects')->where('status',1)->get();
+    return view('web.about-us',compact('projects'));
    }
    public function services(){
     $services=DB::table('tbl_categories_sub')->where('status',1)->get();

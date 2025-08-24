@@ -185,4 +185,33 @@
     </div>
 <!-- Why Choose us Section End -->
 
+  <!-- Exclusive Partners Section Start -->
+    <div class="exclusive-partners">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">executive partners</h3>
+                        <h2 class="text-anime-style-3">100+ Partners & supporters</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                 @foreach ($projects as $logos)
+                <div class="col-lg-3 col-6">
+                    <!-- Partners Logo Start -->
+                    <div class="partners-logo wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="{{asset('uploads/projects/'.$logos->image_url)}}" alt="{{$logos->image_url}}" height="100px" width="250px">
+                    </div>
+                    <!-- Partners Logo End -->
+                </div>
+                 @endforeach
+            </div>
+        </div>
+    </div>
+    <!-- Exclusive Partners Section End -->
+
 @include('paneluser.footer')
