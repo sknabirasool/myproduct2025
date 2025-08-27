@@ -27,7 +27,7 @@ class ProjectRegistrationMail extends Mailable
 
       public function build()
     {
-        return $this->subject('Welcome To Build Your App || Project Registration Mail')->view('emails.project-register-mail',['user' => $this->user, 'data' => $this->project_title]);
+        return $this->subject('Welcome To Build Your Project || Project Registration Mail')->view('emails.project-register-mail',['user' => $this->user, 'data' => $this->project_title]);
     }
 
 }
