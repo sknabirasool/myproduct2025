@@ -13,21 +13,21 @@ class ProjectRegistrationMail extends Mailable
 {
     use Queueable, SerializesModels;
         public $user;
-         public $data;
+         public $project_title;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($user, $data)
+    public function __construct($user, $project_title)
     {
 
         $this->user=$user;
-        $this->data=$data;
+        $this->project_title=$project_title;
     }
 
       public function build()
     {
-        return $this->subject('Welcome To Build Your App || Project Registration Mail')->view('emails.project-register-mail',['user' => $this->user, 'data' => $this->data]);
+        return $this->subject('Welcome To Build Your App || Project Registration Mail')->view('emails.project-register-mail',['user' => $this->user, 'data' => $this->project_title]);
     }
 
 }
