@@ -70,6 +70,8 @@ public function projectRegistrationData(Request $request)
         $project_title = $request->project_title;
         $project_description = $request->project_description;
 
+        $fullname = $fname . ' ' . $lname;
+
        $data=ProjectRegistration::create([
             'fname' => $fname,
             'lname' => $lname,
@@ -82,7 +84,7 @@ public function projectRegistrationData(Request $request)
         ]);
 
         DB::commit(); // Commit transaction
-        Mail::to($email)->send(new ProjectRegistrationMail($data));
+        Mail::to($email)->send(new ProjectRegistrationMail($fullname,$data));
         Session::flash('alert-success', 'Project registration successfully done. We will contact you soon.');
         \App\Helpers\LogActivity::addToLog('Successfully registered.');
         return redirect('/project-registration');
