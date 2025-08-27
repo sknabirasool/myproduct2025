@@ -9,7 +9,7 @@ use App\Models\ProjectRegistration;
 use App\Mail\ProjectRegistrationMail;
 
 use Illuminate\Support\Facades\Log;
-use App\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
@@ -82,6 +82,18 @@ public function projectRegistrationData(Request $request)
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
+
+        $createUser = User::create([
+            'name' => $fullname,
+            'email' => $email,
+            'password' => Hash::make('BuildYourProject@123'), // Default password
+            'usertype' => 'user',
+            'status' => 1,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+
+
 
         DB::commit(); // Commit transaction
         Mail::to($email)->send(new ProjectRegistrationMail($fullname,$project_title));
