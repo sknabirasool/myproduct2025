@@ -26,6 +26,11 @@ Route::get('/contact-us', [WebSiteController::class, 'contactUs']);
 Route::get('/project-profile/{id}', [WebSiteController::class, 'projectProfile']);
 
 
+Route::get('/project-registration',[WebSiteController::class,'projectRegistration']);
+Route::post('/project-registration-data',[WebSiteController::class,'projectRegistrationData']);
+
+
+
 // =================================== Back - End Servies   =====================================
 // Route::get('/admin-home', [AdminController::class, 'adminWelcome']);
 

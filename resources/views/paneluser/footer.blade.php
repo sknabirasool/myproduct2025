@@ -15,7 +15,7 @@
                                 <p>Build Your Projects (BYP) delivers specialized solutions designed to empower small businesses, software training institutes, civil engineering ventures, and learning management system (LMS) applications. We address the critical challenges faced during early development with precision and insight. </p>
                                 <ul>
                                     <li><a href="#">info@buildyourproject.in</a></li>
-                                    <li><a href="#">+91-939-83-25250</a></li>
+                                    {{-- <li><a href="#">+91-939-83-25250</a></li> --}}
                                 </ul>
                             </div>
                             <!-- Footer About End -->

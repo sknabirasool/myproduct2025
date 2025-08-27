@@ -98,7 +98,7 @@
                             <li>Proactive Support</li>
                         </ul> --}}
 
-                        <a href="#" class="btn-default wow fadeInUp" data-wow-delay="1.25s">Project Registration Form</a>
+                        <a href="{{url('/project-registration')}}" class="btn-default wow fadeInUp" data-wow-delay="1.25s">Project Registration Form</a>
                     </div>
                     <!-- About Us Content End -->
                 </div>
