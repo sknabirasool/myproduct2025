@@ -10,7 +10,15 @@
 
         <p>Your project "<strong>{{ $project_title }}</strong>" has been successfully registered. Our team will contact you soon.</p>
 
-        <p>For any queries, contact us at <a href="mailto:info@buildyourproject.in">info@buildyourproject.in</a> or visit our <a href="http://buildyourproject.in/">website</a>.</p>
+        <h3 style="color: #333;">Your Login Details</h3>
+        <p><strong>Email:</strong> {{ $email }}</p>
+        <p><strong>Password:</strong> BuildYourProject@123</p>
+        <p style="color:#d00; font-size:14px;">(Please change your password after first login for security.)</p>
+
+        <p>For any queries, contact us at
+            <a href="mailto:info@buildyourproject.in">info@buildyourproject.in</a>
+            or visit our <a href="http://buildyourproject.in/">website</a>.
+        </p>
 
         <br>
         <p>Best regards,</p>

@@ -96,7 +96,7 @@ public function projectRegistrationData(Request $request)
 
 
         DB::commit(); // Commit transaction
-        Mail::to($email)->send(new ProjectRegistrationMail($fullname,$project_title));
+        Mail::to($email)->send(new ProjectRegistrationMail($fullname,$project_title,$email));
         Session::flash('alert-success', 'Project registration successfully done. We will contact you soon.');
         \App\Helpers\LogActivity::addToLog('Successfully registered.');
         return redirect('/project-registration');
