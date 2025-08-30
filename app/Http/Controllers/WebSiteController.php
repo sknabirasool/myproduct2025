@@ -145,7 +145,8 @@ public function webLoginUserData(Request $request)
 public function customerDashboard(){
     $user=Auth::id();
     $contentdetails=DB::table('users')->where('id',$user)->get();
-    return view('web.customer-dashboard',compact('contentdetails'));
+    $customer_projects=DB::table('project_registrations')->where('email',Auth::user()->email)->get();
+    return view('web.customer-dashboard',compact('contentdetails','customer_projects'));
 }
 
 

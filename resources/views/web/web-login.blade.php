@@ -38,7 +38,7 @@
 									</div>
 
 									<div class="form-group col-md-12 mb-4">
-										<input type="text" name="password" class="form-control" id="password" placeholder="Password" required >
+										<input type="password" name="password" class="form-control" id="password" placeholder="Password" required >
 										<div class="help-block with-errors"></div>
 									</div>
 
