@@ -84,6 +84,7 @@
                                                     <th scope="col">Email</th>
                                                     <th scope="col">Phone</th>
                                                     <th scope="col">Address</th>
+                                                    <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -97,7 +98,10 @@
                                                     <td>{{ $profile->email}}</td>
                                                     <td>{{ $profile->mobile_number }}</td>
                                                     <td>{{ $profile->address }}</td>
-
+                                                    <td>
+                                                        <a href="{{ url('edit-customer-profile/'.$profile->id) }}" class="badge bg-success">Edit Profile</a>
+                                                        <a href="{{ url('change-customer-password/'.$profile->id) }}" class="badge bg-primary">Change Password</a>
+                                                    </td>
                                                 </tr>
                                                 @endforeach
                                             </tbody>

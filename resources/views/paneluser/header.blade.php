@@ -77,7 +77,7 @@
                                 <a href="{{ url('/project-registration') }}" class="btn-default">Submit Your Project</a>
                             @else
                                 <!-- When Logged in -->
-                                <a href="{{ url('/dashboard') }}" class="btn-default">Dashboard</a> &nbsp;
+                                <a href="{{ url('/customer-dashboard') }}" class="btn-default">Dashboard</a> &nbsp;
 
                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">
                                     @csrf
