@@ -101,7 +101,7 @@
 									</div>
 
 									<div class="col-md-12">
-										<button type="submit" class="btn-default">send a message</button>
+										<button type="submit" class="btn-default">Submit Your Project</button>
 										<div id="msgSubmit" class="h3 text-left hidden"></div>
 									</div>
 								</div>

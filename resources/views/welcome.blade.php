@@ -28,7 +28,7 @@
 
                         <!-- Hero Footer Start -->
                         <div class="hero-footer">
-                            <a href="#" class="btn-default wow fadeInUp" data-wow-delay="0.75s">free consultation</a>
+                            <a href="{{url('/project-registration')}}" class="btn-default wow fadeInUp" data-wow-delay="0.75s">Submit Your Project</a>
                             <a href="{{url('/portfolio')}}" class="btn-default wow fadeInUp" data-wow-delay="0.75s">View Portfolio</a>
                         </div>
                         <!-- Hero Footer End -->
@@ -98,7 +98,7 @@
                             <li>Proactive Support</li>
                         </ul> --}}
 
-                        <a href="{{url('/project-registration')}}" class="btn-default wow fadeInUp" data-wow-delay="1.25s">Project Registration Form</a>
+                        <a href="{{url('/project-registration')}}" class="btn-default wow fadeInUp" data-wow-delay="1.25s">Submit Your Project</a>
                     </div>
                     <!-- About Us Content End -->
                 </div>
@@ -361,51 +361,7 @@
                     <!-- Why Choose Item End -->
                 </div>
 
-                <div class="col-md-12">
-                    <!-- Why Us Explore Item Start -->
-                    <div class="why-us-explore-item">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="why-us-section-title">
-                                    <!-- Section Title Start -->
-                                    <div class="section-title">
-                                        <h2 class="text-anime-style-3">Do you want to explore our outstanding work?</h2>
-                                    </div>
-                                    <!-- Section Title End -->
 
-                                    <!-- Explore Item Icon Start -->
-                                    <div class="explore-item-icon">
-                                        <img src="{{asset('web/images/icon-whyus-4.svg')}}" alt="">
-                                    </div>
-                                    <!-- Explore Item Icon End -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <!-- Explore Item Content Start -->
-                                <div class="explore-item-content wow fadeInUp" data-wow-delay="0.25s">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium , totam rem aperiam, eaque ipsa quae ab illo inventore et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p>
-                                </div>
-                                <!-- Explore Item Content End -->
-                            </div>
-
-                            <div class="col-lg-6">
-                                <!-- Explore Item Content Start -->
-                                <div class="explore-item-tags wow fadeInUp" data-wow-delay="0.25s">
-                                    <ul>
-                                        {{-- <li><a href="#" class="btn-default">dribbble</a></li>
-                                        <li><a href="#" class="btn-default">linkedin</a></li> --}}
-                                        <li><a href="{{url('/contact-us')}}" class="btn-default">contact Us</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Explore Item Content End -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Why Us Explore Item End -->
-                </div>
             </div>
         </div>
     </div>
@@ -441,7 +397,7 @@
     <!-- Exclusive Partners Section End -->
 
     <!-- Clients Testimonials Section Start -->
-	<div class="clients-testimonials">
+	{{-- <div class="clients-testimonials">
         <div class="container">
             <div class="row section-row align-items-center">
                 <div class="col-lg-8 col-md-12">
@@ -563,11 +519,11 @@
 				</div>
 			</div>
         </div>
-    </div>
+    </div> --}}
     <!-- Clients Testimonials Section End -->
 
     <!-- Latest News Section Start -->
-	<div class="latest-news">
+	{{-- <div class="latest-news">
 		<div class="container">
 			<div class="row section-row align-items-center">
                 <div class="col-lg-6 col-md-8">
@@ -653,6 +609,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 	<!-- Latest News Section End -->
     @include('paneluser.footer')

@@ -26,11 +26,11 @@
                             <div class="footer-links">
                                 <h2>pages</h2>
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="{{url('/')}}">Home</a></li>
+                                    <li><a href="{{url('/about')}}">About Us</a></li>
+                                    <li><a href="{{url('services')}}">Services</a></li>
+                                    <li><a href="{{url('/portfolio')}}">portfolio</a></li>
+                                    <li><a href="{{url('project-registration')}}">Submit Your Project</a></li>
                                 </ul>
                             </div>
                             <!-- Footer Links End -->

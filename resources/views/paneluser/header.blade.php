@@ -93,7 +93,7 @@
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
                             <a href="{{url('/login')}}" class="btn-default">Log in</a> &nbsp;
-                            {{-- <a href="contact-us.html" class="btn-default">Sign up</a> --}}
+                            <a href="{{url('/project-registration')}}" class="btn-default">Submit Your Project</a>
                         </div>
 
                         <!-- Let’s Start Button End -->
