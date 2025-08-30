@@ -64,8 +64,6 @@ public function logout(Request $request)
 
 public function projectRegistrationData(Request $request)
 {
-    // dd($request->all());
-
     DB::beginTransaction(); // Start DB transaction
 
     try {
@@ -78,7 +76,8 @@ public function projectRegistrationData(Request $request)
 
         $fullname = $fname . ' ' . $lname;
 
-       $data=ProjectRegistration::create([
+        // Insert project registration data
+        $data = ProjectRegistration::create([
             'fname' => $fname,
             'lname' => $lname,
             'phone' => $phone,
@@ -89,20 +88,27 @@ public function projectRegistrationData(Request $request)
             'updated_at' => Carbon::now(),
         ]);
 
-        $createUser = User::create([
-            'name' => $fullname,
-            'email' => $email,
-            'password' => Hash::make('BuildYourProject@123'), // Default password
-            'usertype' => 'user',
-            'status' => 1,
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
-        ]);
+        // ✅ Check if user already exists
+        $existingUser = User::where('email', $email)->first();
 
-
+        if (!$existingUser) {
+            // Create new user if not exists
+            $createUser = User::create([
+                'name' => $fullname,
+                'email' => $email,
+                'password' => Hash::make('BuildYourProject@123'), // Default password
+                'usertype' => 'user',
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+        }
 
         DB::commit(); // Commit transaction
-        Mail::to($email)->send(new ProjectRegistrationMail($fullname,$project_title,$email));
+
+        // Send mail
+        Mail::to($email)->send(new ProjectRegistrationMail($fullname, $project_title, $email));
+
         Session::flash('alert-success', 'Project registration successfully done. We will contact you soon.');
         \App\Helpers\LogActivity::addToLog('Successfully registered.');
         return redirect('/project-registration');
