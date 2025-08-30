@@ -144,9 +144,9 @@ public function webLoginUserData(Request $request)
 
 public function customerDashboard(){
     $user=Auth::id();
-    $contentdetails=DB::table('users')->where('id',$user)->get();
-    $customer_projects=DB::table('project_registrations')->where('email',Auth::user()->email)->get();
-    return view('web.customer-dashboard',compact('contentdetails','customer_projects'));
+    $customer_profile=DB::table('users')->where('id',$user)->get();
+    $customer_projects=DB::table('tbl_customer_projects')->where('email',Auth::user()->email)->get();
+    return view('web.customer-dashboard',compact('customer_profile','customer_projects'));
 }
 
 
