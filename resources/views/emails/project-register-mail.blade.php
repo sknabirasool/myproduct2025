@@ -10,10 +10,23 @@
 
         <p>Your project "<strong>{{ $project_title }}</strong>" has been successfully registered. Our team will contact you soon.</p>
 
-        <h3 style="color: #333;">Your Login Details</h3>
+        {{-- <h3 style="color: #333;">Your Login Details</h3>
         <p><strong>Email:</strong> {{ $email }}</p>
-        <p><strong>Password:</strong> BuildYourProject@123</p>
+        <p><strong>Password:</strong> BuildYourProject@123</p> --}}
+
+        login details
+        -----------------------------
+        Email: {{ $email }}
+        Password: BuildYourProject@123
+        -----------------------------
+        You can log in to your account using the link below:
+        -------------------------------------------------------------
+
+        <a href="http://buildyourproject.in/web-login" style="display: inline-block; padding: 10px 15px; background-color: #28a745; color: #ffffff; text-decoration: none; border-radius: 5px; margin-top: 10px;">Login to Your Account</a>
+
         <p style="color:#d00; font-size:14px;">(Please change your password after first login for security.)</p>
+
+
 
         <p>For any queries, contact us at
             <a href="mailto:info@buildyourproject.in">info@buildyourproject.in</a>
