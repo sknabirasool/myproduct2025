@@ -16,7 +16,7 @@ Route::get('/', function () {
 
     return view('welcome',compact('services','projects'));
 });
-
+Route::post('/logout', [WebSiteController::class, 'logout'])->name('logout');
 Route::get('/about', [WebSiteController::class, 'aboutus']);
 Route::get('/services', [WebSiteController::class, 'services']);
 Route::get('/portfolio', [WebSiteController::class, 'portfolio']);
@@ -29,7 +29,9 @@ Route::get('/project-profile/{id}', [WebSiteController::class, 'projectProfile']
 Route::get('/project-registration',[WebSiteController::class,'projectRegistration']);
 Route::post('/project-registration-data',[WebSiteController::class,'projectRegistrationData']);
 
-
+Route::get('/web-login', [WebSiteController::class, 'webLogin']);
+Route::post('/web-login-user-data', [WebSiteController::class, 'webLoginUserData']);
+Route::get('/customer-dashboard', [WebSiteController::class, 'customerDashboard']);
 
 // =================================== Back - End Servies   =====================================
 // Route::get('/admin-home', [AdminController::class, 'adminWelcome']);

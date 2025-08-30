@@ -54,7 +54,13 @@ class WebSiteController extends Controller
        return view('web.project-registration');
     }
 
-
+public function logout(Request $request)
+{
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+}
 
 public function projectRegistrationData(Request $request)
 {
@@ -108,6 +114,43 @@ public function projectRegistrationData(Request $request)
         return redirect()->back()->withInput()->withErrors(['error' => $e->getMessage()]);
     }
 }
+
+public function webLogin(){
+    return view('web.web-login');
+}
+
+
+public function webLoginUserData(Request $request)
+{
+    // Validate input
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required|string',
+    ]);
+
+    $email = $request->email;
+    $password = $request->password;
+
+    $user = User::where('email', $email)->first();
+
+    if ($user && Hash::check($password, $user->password)) {
+        Auth::login($user);
+        \App\Helpers\LogActivity::addToLog('User logged in successfully.');
+        return redirect('/customer-dashboard')->with('alert-success', 'Login successful!');
+    } else {
+        return redirect()->back()->with('alert-danger', 'Invalid email or password.')->withInput();
+    }
+}
+
+public function customerDashboard(){
+    $user=Auth::id();
+    $contentdetails=DB::table('users')->where('id',$user)->get();
+    return view('web.customer-dashboard',compact('contentdetails'));
+}
+
+
+
+
 
 
 }

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
-<!-- Mirrored from demo.awaikenthemes.com/html-preview/weebix/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Jan 2025 03:16:55 GMT -->
 <head>
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -39,7 +37,6 @@
 	<div class="preloader">
 		<div class="loading-container">
 			<div class="loading"></div>
-			{{-- <div id="loading-icon"><img src="{{asset('web/images/loader.svg')}}" alt=""></div> --}}
 		</div>
 	</div>
 	<!-- Preloader End -->
@@ -66,36 +63,33 @@
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li class="nav-item"><a class="nav-link" href="{{url('/')}}">Home</a></li>
-                                {{-- <li class="nav-item submenu"><a class="nav-link" href="index-2.html">home</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="index.html">Hero Layout 1</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-3.html">Hero Layout 2</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-4.html">Hero Layout 3</a></li>
-                                    </ul>
-                                </li> --}}
-                                <li class="nav-item"><a class="nav-link" href="{{url('/about')}}">about us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{url('/services')}}">services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{url('/portfolio')}}">portfolio</a></li>
-                                {{-- <li class="nav-item"><a class="nav-link" href="blog.html">blog</a></li> --}}
-                                {{-- <li class="nav-item submenu"><a class="nav-link" href="#">pages</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="service-single.html">service details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="portfolio-single.html">portfolio details </a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">blog details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQ</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
-                                    </ul>
-                                </li> --}}
-
-                                <li class="nav-item highlighted-menu"><a class="nav-link" href="contact-us.html">free consultation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url('/about')}}">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url('/services')}}">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{url('/portfolio')}}">Portfolio</a></li>
+                                <li class="nav-item highlighted-menu"><a class="nav-link" href="{{url('/contact')}}">Free Consultation</a></li>
                             </ul>
                         </div>
                         <!-- Let’s Start Button Start -->
                         <div class="header-btn d-inline-flex">
-                            <a href="{{url('/login')}}" class="btn-default">Log in</a> &nbsp;
-                            <a href="{{url('/project-registration')}}" class="btn-default">Submit Your Project</a>
-                        </div>
+                            @guest
+                                <!-- When NOT logged in -->
+                                <a href="{{ url('/web-login') }}" class="btn-default">Log in</a> &nbsp;
+                                <a href="{{ url('/project-registration') }}" class="btn-default">Submit Your Project</a>
+                            @else
+                                <!-- When Logged in -->
+                                <a href="{{ url('/dashboard') }}" class="btn-default">Dashboard</a> &nbsp;
 
+                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">
+                                    @csrf
+                            </form>
+
+                                <a href="{{ route('logout') }}" class="btn-default"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                                </a>
+
+                            @endguest
+                        </div>
                         <!-- Let’s Start Button End -->
 					</div>
 					<!-- Main Menu End -->
@@ -107,3 +101,5 @@
 		</div>
 	</header>
 	<!-- Header End -->
+
+
