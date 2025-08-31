@@ -21,7 +21,7 @@ Route::get('/about', [WebSiteController::class, 'aboutus']);
 Route::get('/services', [WebSiteController::class, 'services']);
 Route::get('/portfolio', [WebSiteController::class, 'portfolio']);
 
-Route::get('/contact-us', [WebSiteController::class, 'contactUs']);
+Route::get('/contact', [WebSiteController::class, 'contactUs']);
 // Project Profile
 Route::get('/project-profile/{id}', [WebSiteController::class, 'projectProfile']);
 
@@ -32,6 +32,9 @@ Route::post('/project-registration-data',[WebSiteController::class,'projectRegis
 Route::get('/web-login', [WebSiteController::class, 'webLogin']);
 Route::post('/web-login-user-data', [WebSiteController::class, 'webLoginUserData']);
 Route::get('/customer-dashboard', [WebSiteController::class, 'customerDashboard']);
+
+Route::get('/website-change-customer-password/{id}', [WebSiteController::class, 'websiteChangeCustomerPassword']);
+Route::post('/website-change-customer-password-data', [WebSiteController::class, 'websiteChangeCustomerPasswordData']);
 
 // =================================== Back - End Servies   =====================================
 // Route::get('/admin-home', [AdminController::class, 'adminWelcome']);

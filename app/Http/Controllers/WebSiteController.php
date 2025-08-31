@@ -155,9 +155,35 @@ public function customerDashboard(){
     return view('web.customer-dashboard',compact('customer_profile','customer_projects'));
 }
 
+public function websiteChangeCustomerPassword($id){
+    $customer_profile=DB::table('users')->where('id',$id)->get();
+    return view('web.website-change-customer-password',compact('customer_profile'));
+
+}
+
+public function websiteChangeCustomerPasswordData(Request $request)
+{
 
 
+    $user = Auth::user();
 
+
+    if (!$user) {
+        return redirect()->back()->with('alert-danger', 'User not authenticated.');
+    }
+
+    if (!Hash::check($request->current_password, $user->password)) {
+        return redirect()->back()->with('alert-danger', 'Current password is incorrect.')->withInput();
+    }
+
+    $user->password = Hash::make($request->new_password);
+    $user->save();
+
+    \App\Helpers\LogActivity::addToLog('User changed password successfully.');
+
+    return redirect('/customer-dashboard')->with('alert-success', 'Password changed successfully.');
+
+}
 
 
 }

@@ -66,7 +66,22 @@
                                 <li class="nav-item"><a class="nav-link" href="{{url('/about')}}">About Us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{url('/services')}}">Services</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{url('/portfolio')}}">Portfolio</a></li>
-                                <li class="nav-item highlighted-menu"><a class="nav-link" href="{{url('/contact')}}">Free Consultation</a></li>
+                                @guest
+                                     <li class="nav-item highlighted-menu"><a class="nav-link" href="{{url('/web-login')}}">Login</a></li>
+                                       <li class="nav-item highlighted-menu"><a class="nav-link" href="{{url('/project-registration')}}">Submit Your Project</a></li>
+                                @else
+                                     <li class="nav-item"><a class="nav-link" href="{{url('/customer-dashboard')}}">Dashboard</a></li>
+                                     <li class="nav-item highlighted-menu">
+                                        <a class="nav-link" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Logout
+                                        </a>
+                                     </li>
+                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">
+                                        @csrf
+                                     </form>
+                                 @endguest
+
                             </ul>
                         </div>
                         <!-- Let’s Start Button Start -->

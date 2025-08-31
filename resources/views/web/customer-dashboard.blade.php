@@ -9,6 +9,19 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1  col-md-12 offset-md-0">
                     <div class="faq-accordion" id="accordion">
+
+                            @if(Session::has('alert-success'))
+                            <div class="alert alert-success">
+                                {{ Session::get('alert-success') }}
+                            </div>
+                        @endif
+
+                        @if(Session::has('alert-danger'))
+                            <div class="alert alert-danger">
+                                {{ Session::get('alert-danger') }}
+                            </div>
+                        @endif
+
                         <!-- FAQ Item start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.25s">
                              <h3 class="wow fadeInUp" style="padding: 40px">Welcome to Customer Dashboard <b style="color: blue">{{Auth::user()->name}}</b></h3>
@@ -100,7 +113,7 @@
                                                     <td>{{ $profile->address }}</td>
                                                     <td>
                                                         <a href="{{ url('edit-customer-profile/'.$profile->id) }}" class="badge bg-success">Edit Profile</a>
-                                                        <a href="{{ url('change-customer-password/'.$profile->id) }}" class="badge bg-primary">Change Password</a>
+                                                        <a href="{{ url('website-change-customer-password/'.$profile->id) }}" class="badge bg-primary">Change Password</a>
                                                     </td>
                                                 </tr>
                                                 @endforeach
