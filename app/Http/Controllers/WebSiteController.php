@@ -185,7 +185,64 @@ public function websiteChangeCustomerPasswordData(Request $request)
 
 }
 
+public function websiteEditCustomerProfile($id){
+    $customer_profile=DB::table('users')->where('id',$id)->get();
+    return view('web.website-edit-customer-profile',compact('customer_profile'));
+}
 
+public function websiteEditCustomerProfileData(Request $request)
+{
+    DB::beginTransaction(); // Start transaction
+
+    try {
+        $id = $request->id;
+        $name = $request->name;
+        $mobile_number = $request->mobile_number;
+        $address = $request->address;
+
+        $file = $request->filename;
+
+
+                       if($file!=null){
+                      $pic_name=$request->filename->getClientOriginalName();
+                        $imagenames =strtotime(Carbon::now()).rand('0000','9999').".".$pic_name;
+                       $destinationPath = 'uploads/profile/';
+                       $upload_success =$file->move($destinationPath, $imagenames);
+                    }else{
+                      $imagenames="";
+                    }
+
+        // Update user data
+        DB::table('users')->where('id', $id)->update([
+            'name'          => $name,
+            'mobile_number' => $mobile_number,
+            'address'       => $address,
+            'profile_photo'=> $imagenames,
+        ]);
+
+        DB::commit(); // Commit transaction
+
+        Session::flash('alert-success', 'Profile updated successfully.');
+        \App\Helpers\LogActivity::addToLog('Profile updated successfully.');
+
+        return redirect('/customer-dashboard');
+
+    } catch (\Exception $e) {
+        DB::rollBack(); // Rollback transaction
+        \Log::error('Error updating profile: ' . $e->getMessage());
+        Session::flash('alert-danger', 'Something went wrong. Please try again.');
+
+        return redirect()->back()->withInput()->withErrors(['error' => $e->getMessage()]);
+    }
 }
 
 
+
+
+
+
+
+
+
+
+}

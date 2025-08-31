@@ -25,6 +25,7 @@ class User extends Authenticatable
         'status',
         'created_at',
         'updated_at',
+        'profile_photo'
     ];
 
     /**

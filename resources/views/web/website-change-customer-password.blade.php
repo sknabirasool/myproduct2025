@@ -27,7 +27,7 @@
 
 						<div class="contact-form">
 
-                            <h3 class="wow fadeInUp" style="padding: 20px">Change Password Login</h3>
+                            <h3 class="wow fadeInUp" style="padding: 20px">Change Password </h3>
 
 							<form  action="{{url('/website-change-customer-password-data')}}" method="POST" data-toggle="validator">
 								@csrf

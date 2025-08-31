@@ -22,6 +22,8 @@
                             </div>
                         @endif
 
+
+
                         <!-- FAQ Item start -->
                         <div class="accordion-item wow fadeInUp" data-wow-delay="0.25s">
                              <h3 class="wow fadeInUp" style="padding: 40px">Welcome to Customer Dashboard <b style="color: blue">{{Auth::user()->name}}</b></h3>
@@ -93,6 +95,7 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">#</th>
+                                                    <th>Profile Image</th>
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Email</th>
                                                     <th scope="col">Phone</th>
@@ -107,12 +110,19 @@
                                                 @foreach($customer_profile as $profile)
                                                 <tr>
                                                     <th scope="row">{{ $i++ }}</th>
+                                                    <td>
+                                                        @if(Auth::user()->profile_photo)
+                                                            <img src="{{ asset('uploads/profile/'.Auth::user()->profile_photo) }}" alt="Profile Image" style="width: 60px; height: 60px; border-radius: 50%;">
+                                                        @else
+                                                            <img src="{{ asset('uploads/profile/default.png') }}" alt="No Image" style="width: 50px; height: 50px; border-radius: 50%;">
+                                                        @endif
+                                                    </td>
                                                     <td>{{ $profile->name }}</td>
                                                     <td>{{ $profile->email}}</td>
                                                     <td>{{ $profile->mobile_number }}</td>
                                                     <td>{{ $profile->address }}</td>
                                                     <td>
-                                                        <a href="{{ url('edit-customer-profile/'.$profile->id) }}" class="badge bg-success">Edit Profile</a>
+                                                        <a href="{{ url('website-edit-customer-profile/'.$profile->id) }}" class="badge bg-success">Edit Profile</a>
                                                         <a href="{{ url('website-change-customer-password/'.$profile->id) }}" class="badge bg-primary">Change Password</a>
                                                     </td>
                                                 </tr>

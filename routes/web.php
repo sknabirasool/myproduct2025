@@ -35,7 +35,8 @@ Route::get('/customer-dashboard', [WebSiteController::class, 'customerDashboard'
 
 Route::get('/website-change-customer-password/{id}', [WebSiteController::class, 'websiteChangeCustomerPassword']);
 Route::post('/website-change-customer-password-data', [WebSiteController::class, 'websiteChangeCustomerPasswordData']);
-
+Route::get('/website-edit-customer-profile/{id}', [WebSiteController::class, 'websiteEditCustomerProfile']);
+Route::post('/website-edit-customer-profile-data', [WebSiteController::class, 'websiteEditCustomerProfileData']);
 // =================================== Back - End Servies   =====================================
 // Route::get('/admin-home', [AdminController::class, 'adminWelcome']);
 
