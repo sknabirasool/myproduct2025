@@ -41,7 +41,7 @@ Route::post('/website-edit-customer-profile-data', [WebSiteController::class, 'w
 
 Route::get('/web-admin-dashboard', function () {
     $user=Auth::id();
-    $customer_profile=DB::table('users')->get();
+    $customer_profile=DB::table('users')->where('id',$user)->get();
 
     $userId = Auth::id();
     $userEmail = Auth::user()->email;
