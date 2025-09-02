@@ -38,7 +38,26 @@ Route::post('/website-change-customer-password-data', [WebSiteController::class,
 Route::get('/website-edit-customer-profile/{id}', [WebSiteController::class, 'websiteEditCustomerProfile']);
 Route::post('/website-edit-customer-profile-data', [WebSiteController::class, 'websiteEditCustomerProfileData']);
 // =================================== Back - End Servies   =====================================
+
+Route::get('/web-admin-dashboard', function () {
+    $user=Auth::id();
+    $customer_profile=DB::table('users')->get();
+
+    $userId = Auth::id();
+    $userEmail = Auth::user()->email;
+
+$customer_projects= DB::table('users')
+    ->join('tbl_customer_projects', 'users.email', '=', 'tbl_customer_projects.email')
+    ->select('users.*', 'tbl_customer_projects.*') // get all columns from both
+    ->where('tbl_customer_projects.email', '!=', $userEmail) // exclude current user's projects
+    ->whereNotIn('users.id', [$userId]) // exclude current user by ID
+    ->get();
+
+    return view('web.web-admin-dashboard',compact('customer_profile','customer_projects'));
+
+});
 // Route::get('/admin-home', [AdminController::class, 'adminWelcome']);
+
 
 Route::get('/admin-home', function () {
     $user=Auth::id();

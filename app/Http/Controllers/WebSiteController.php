@@ -141,8 +141,22 @@ public function webLoginUserData(Request $request)
 
     if ($user && Hash::check($password, $user->password)) {
         Auth::login($user);
-        \App\Helpers\LogActivity::addToLog('User logged in successfully.');
-        return redirect('/customer-dashboard')->with('alert-success', 'Login successful!');
+         $authenticatedUser  = Auth::user(); // Get the authenticated user
+          if ($authenticatedUser->usertype == 'admin') {
+                        // User type is 1, redirect to one URL
+                         $request->session()->flash('alert-success', 'Welcome to Admin Dashboard, ' . $authenticatedUser->name);
+                          \App\Helpers\LogActivity::addToLog('User logged in successfully.');
+                         return redirect('/web-admin-dashboard')->with('alert-success', 'Login successful!');
+                } else if ($authenticatedUser->usertype == 'user') {
+                      // User type is not 1, redirect to another URL
+                     $request->session()->flash('alert-success', 'Welcome to a Employee dashboard, ' . $authenticatedUser->name);
+                      \App\Helpers\LogActivity::addToLog('User logged in successfully.');
+                     return redirect('/customer-dashboard')->with('alert-success', 'Login successful!');
+                  } else {
+                    Auth::logout();
+                    return redirect()->back()->with('alert-danger', 'Unauthorized user type.')->withInput();
+                }
+
     } else {
         return redirect()->back()->with('alert-danger', 'Invalid email or password.')->withInput();
     }
