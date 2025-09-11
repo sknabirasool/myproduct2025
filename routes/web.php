@@ -58,6 +58,16 @@ $customer_projects= DB::table('users')
 });
 // Route::get('/admin-home', [AdminController::class, 'adminWelcome']);
 
+//sidemenu website
+
+
+Route::get('/web-my-projects', [WebSiteController::class, 'webMyProjects']);
+
+Route::get('/web-my-profile', function () {
+    $user=Auth::id();
+    $customer_profile=DB::table('users')->where('id',$user)->get();
+    return view('web.web-my-profile',compact('customer_profile'));
+});
 
 Route::get('/admin-home', function () {
     $user=Auth::id();

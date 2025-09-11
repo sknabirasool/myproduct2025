@@ -1,26 +1,14 @@
 @include('paneluser.header')
 
-
- <!-- Single Service Page Start -->
+<!-- Single Service Page Start -->
     <div class="page-service-single">
         <div class="container">
-
             <div class="row">
+
                 <div class="col-lg-3">
                     @include('paneluser.side-menu')
                 </div>
                  <div class="col-lg-9">
-                    @if(Session::has('alert-success'))
-                            <div class="alert alert-success">
-                                {{ Session::get('alert-success') }}
-                            </div>
-                        @endif
-
-                        @if(Session::has('alert-danger'))
-                            <div class="alert alert-danger">
-                                {{ Session::get('alert-danger') }}
-                            </div>
-                        @endif
 					<!-- Service Content Start -->
 					<div class="service-single-content">
 						<!-- Service Featured Image Start -->
@@ -77,8 +65,4 @@
         </div>
     </div>
     <!-- Single Service Page End -->
-
-<br>
-
-
 @include('paneluser.footer')

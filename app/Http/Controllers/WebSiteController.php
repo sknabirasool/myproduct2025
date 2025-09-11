@@ -169,6 +169,13 @@ public function customerDashboard(){
     return view('web.customer-dashboard',compact('customer_profile','customer_projects'));
 }
 
+public function webMyProjects(){
+    $user=Auth::id();
+    $customer_profile=DB::table('users')->where('id',$user)->get();
+    $customer_projects=DB::table('tbl_customer_projects')->where('email',Auth::user()->email)->get();
+    return view('web.web-my-projects',compact('customer_profile','customer_projects'));
+}
+
 public function websiteChangeCustomerPassword($id){
     $customer_profile=DB::table('users')->where('id',$id)->get();
     return view('web.website-change-customer-password',compact('customer_profile'));
