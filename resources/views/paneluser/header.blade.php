@@ -65,6 +65,7 @@
                                 <li class="nav-item"><a class="nav-link" href="{{url('/')}}">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{url('/about')}}">About Us</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{url('/services')}}">Services</a></li>
+								<li class="nav-item"><a class="nav-link" href="{{url('/training')}}">Training</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{url('/portfolio')}}">Portfolio</a></li>
                                 @guest
                                      <li class="nav-item highlighted-menu"><a class="nav-link" href="{{url('/web-login')}}">Login</a></li>

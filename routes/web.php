@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\WebSiteController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\StudentController;
 
 Route::get('/', function () {
     $services=DB::table('tbl_categories_sub')->where('status',1)->get();
@@ -37,6 +39,24 @@ Route::get('/website-change-customer-password/{id}', [WebSiteController::class, 
 Route::post('/website-change-customer-password-data', [WebSiteController::class, 'websiteChangeCustomerPasswordData']);
 Route::get('/website-edit-customer-profile/{id}', [WebSiteController::class, 'websiteEditCustomerProfile']);
 Route::post('/website-edit-customer-profile-data', [WebSiteController::class, 'websiteEditCustomerProfileData']);
+
+//Training Controller
+Route::get('/training', [TrainingController::class, 'training']);
+Route::get('/training-dashboard', [TrainingController::class, 'trainingDashboard']);
+
+Route::get('/web-add-course', [TrainingController::class, 'webAddCourse']);
+Route::post('/web-add-course-data', [TrainingController::class, 'webAddCourseData']);
+Route::get('/web-my-courses', [TrainingController::class, 'webMyCourses']);
+
+
+
+
+
+
+//Student Controller
+ Route::get('/student-dashboard', [StudentController::class, 'studentDashboard']);
+
+
 // =================================== Back - End Servies   =====================================
 
 Route::get('/web-admin-dashboard', function () {

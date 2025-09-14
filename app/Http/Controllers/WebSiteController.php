@@ -152,7 +152,20 @@ public function webLoginUserData(Request $request)
                      $request->session()->flash('alert-success', 'Welcome to a Employee dashboard, ' . $authenticatedUser->name);
                       \App\Helpers\LogActivity::addToLog('User logged in successfully.');
                      return redirect('/customer-dashboard')->with('alert-success', 'Login successful!');
-                  } else {
+                }
+                 else if ($authenticatedUser->usertype == 'teacher') {
+                      // User type is not 1, redirect to another URL
+                     $request->session()->flash('alert-success', 'Welcome to a Employee dashboard, ' . $authenticatedUser->name);
+                      \App\Helpers\LogActivity::addToLog('User logged in successfully.');
+                     return redirect('/training-dashboard')->with('alert-success', 'Login successful!');
+
+                 } else if ($authenticatedUser->usertype == 'student') {
+                      // User type is not 1, redirect to another URL
+                     $request->session()->flash('alert-success', 'Welcome to a Employee dashboard, ' . $authenticatedUser->name);
+                      \App\Helpers\LogActivity::addToLog('User logged in successfully.');
+                     return redirect('/student-dashboard')->with('alert-success', 'Login successful!');
+
+                    } else {
                     Auth::logout();
                     return redirect()->back()->with('alert-danger', 'Unauthorized user type.')->withInput();
                 }

@@ -55,11 +55,9 @@
                             <div class="footer-links">
                                 <h2>services</h2>
                                 <ul>
-                                    <li><a href="#">web development</a></li>
-                                    <li><a href="#">digital marketing</a></li>
-                                    <li><a href="#">game development</a></li>
-                                    <li><a href="#">mobile app development</a></li>
-                                    <li><a href="#">networking services</a></li>
+                                    <li><a href="#">Web development</a></li>
+                                    <li><a href="#">Online Class </a></li>
+
                                 </ul>
                             </div>
                             <!-- Footer Links End -->
